@@ -5,7 +5,7 @@
 #    ansible_become_method: enable
   block:
     - name: create a local backup folder
-      delegate_to: localhost
+      delegate_to: backup-server
       file: 
         path: "{{ playbook_dir }}/backup"
         state: directory
@@ -18,7 +18,7 @@
       register: run_output
 
     - name: create backup file with timestamp
-      delegate_to: localhost
+      delegate_to: backup-server
       copy:
         content: "{{ run_output.stdout | join('\n') }}"
         dest: "{{ playbook_dir }}/backup/{{ inventory_hostname }}"
