@@ -31,4 +31,5 @@
     - name: save variable
       set_fact: 
         bup_temp_file: "{{ playbook_dir }}/backup/{{ inventory_hostname }}"
+      delegate_to: backup-server
   when: ansible_network_os == 'junos'
