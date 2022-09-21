@@ -16,14 +16,14 @@
 #   delegate_to: backup-server
 
 # tasks file for network_backup_git
-  # - name: make sure the git repo is up to date/exists on backup-server
-  #   delegate_to: backup-server
-  #   run_once: True
-  #   become: True
-  #   git:
-  #     repo: "{{ backup_repo }}"
-  #     dest: "{{ backup_dir }}"
-  #     update: yes
+- name: make sure the git repo is up to date/exists on backup-server
+  delegate_to: backup-server
+  run_once: True
+  become: True
+  git:
+    repo: "{{ backup_repo }}"
+    dest: "{{ backup_dir }}"
+    update: yes
 
 - name: include cisco task when Cisco device
   include_tasks: "{{ role_path }}/tasks/network_backup_cisco.yml"
