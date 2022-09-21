@@ -1,6 +1,5 @@
 ---
 - name: network device backup to git
-#  hosts: mtk1
   hosts: routers
   gather_facts: false
   vars:
