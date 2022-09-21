@@ -74,6 +74,6 @@
   # delegate_to: backup-server
   # changed_when: git_return.stderr != "Everything up-to-date"
   run_once: true
-  connection: local
+  # connection: local
   register: git_return
   become: True
