@@ -1,7 +1,7 @@
 ---
 - name: network device backup to git
 #  hosts: mtk1
-  hosts: cat_update_lab
+  hosts: routers
   gather_facts: false
   vars:
     # Setting this to true here or overriding it in a playbook will cause the run to
