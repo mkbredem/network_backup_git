@@ -44,7 +44,7 @@
       src: "{{ bup_temp_file }}"
       dest: "{{ backup_file }}"
     register: copy_result
-    delegate_to: localhost
+    delegate_to: backup-server
 
   - name: Delete the temp file
     file:
