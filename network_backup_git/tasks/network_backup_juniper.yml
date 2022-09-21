@@ -4,7 +4,7 @@
 #    ansible_become: yes
 #    ansible_become_method: enable
   block:
-    - name: create a local backup folder
+    - name: create a local backup at {{ playbook_dir }}/backup
       delegate_to: backup-server
       file: 
         path: "{{ playbook_dir }}/backup"
