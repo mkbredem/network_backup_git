@@ -16,6 +16,7 @@
       junos_command:
         commands: show configuration
       register: run_output
+      become: false
 
     - name: create backup file with timestamp
       delegate_to: backup-server
