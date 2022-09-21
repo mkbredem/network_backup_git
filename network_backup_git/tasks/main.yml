@@ -61,6 +61,7 @@
   - name: Add any new backups to the repository - ignore key checking
 #    shell: "git add *; git commit -m '{{ time }}'; git push"
     shell: "git add *; git commit -m '{{ time }}'; git config --global core.sshCommand 'ssh -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no'; git push"
+    delegate_to: backup-server
 
     args:
       chdir: "{{ backup_dir }}"
