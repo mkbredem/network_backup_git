@@ -9,12 +9,6 @@
     state: directory
     mode: '0777'
 
-# - name: ensure EE projects directory exists
-#   git: 
-#     repo: https://github.com/mkbredem/net_backups.git
-#     dest: /opt/
-#   delegate_to: backup-server
-
 # tasks file for network_backup_git
 - name: make sure the git repo is up to date/exists on backup-server
   delegate_to: backup-server
