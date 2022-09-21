@@ -35,7 +35,7 @@
 #    backup_dir: "{{ playbook_dir }}/net_backups"
     backup_dir: "/opt/net_backups"
     backup_file: "{{ backup_dir }}/{{ inventory_hostname }}"
-    backup_repo: https://github.com/mkbredem/net_backups.git
+    backup_repo: https://github.com/mkbredem/net_backups
     # git_name: Git Backup
     # git_email: mbredeme@redhat.com
 
