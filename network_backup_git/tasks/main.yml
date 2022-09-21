@@ -3,7 +3,7 @@
   - name: create git repo folder
     become: True
     run_once: true
-    delegate_to: localhost
+    delegate_to: backup-server
     file:
       path: "{{ backup_dir }}"
       state: directory
