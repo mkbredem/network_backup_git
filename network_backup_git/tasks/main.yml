@@ -10,8 +10,8 @@
       mode: '0777'
 
 # tasks file for network_backup_git
-  - name: make sure the git repo is up to date/exists on localhost
-    delegate_to: localhost
+  - name: make sure the git repo is up to date/exists on backup-server
+    delegate_to: backup_server
     run_once: True
     become: True
     git:
