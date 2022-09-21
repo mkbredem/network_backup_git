@@ -11,7 +11,7 @@
 
 # tasks file for network_backup_git
   - name: make sure the git repo is up to date/exists on backup-server
-    delegate_to: backup_server
+    delegate_to: backup-server
     run_once: True
     become: True
     git:
