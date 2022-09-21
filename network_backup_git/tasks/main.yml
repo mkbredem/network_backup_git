@@ -52,11 +52,12 @@
       path: "{{ bup_temp_file }}"
       state: absent
     changed_when: False
-    delegate_to: localhost
+    delegate_to: backup-server
 
   - name: get timestamp
     set_fact: time="{{lookup('pipe','date \"+%Y-%m-%d-%H-%M\"')}}"
     run_once: true
+    delegate_to: backup-server
 
   - name: Add any new backups to the repository - ignore key checking
 #    shell: "git add *; git commit -m '{{ time }}'; git push"
