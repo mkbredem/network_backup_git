@@ -43,6 +43,7 @@
     copy:
       src: "{{ bup_temp_file }}"
       dest: "{{ backup_file }}"
+      remote_src: yes
     register: copy_result
     delegate_to: backup-server
 
